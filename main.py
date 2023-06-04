@@ -1,7 +1,9 @@
 from tkinter import Tk, Button, Entry
 
-def pulsacion(valor):
-    pantalla.insert(0,valor)
+def pulsacion(event):
+    pantalla.insert("end",1)
+def pulsacion2(event):
+    pantalla.insert("end",2)
 
 
 # Configuración ventana principal
@@ -18,7 +20,9 @@ pantalla.grid(row=0, column=0, columnspan=4, padx=1, pady=1)
 boton_1 = Button(root, text="1", width=9, height=3, bg="white", fg="red", borderwidth=0, cursor="hand2")
 boton_1.grid(row=1, column=0,columnspan=1, padx=1, pady=1)
 boton_1.bind("<Button-1>",pulsacion)
-boton_2 = Button(root, text="2", width=9, height=3, bg="white", fg="red", borderwidth=0, cursor="hand2").grid(row=1, column=1,columnspan=1, padx=1, pady=1)
+boton_2 = Button(root, text="2", width=9, height=3, bg="white", fg="red", borderwidth=0, cursor="hand2")
+boton_2.grid(row=1, column=1,columnspan=1, padx=1, pady=1)
+boton_2.bind("<Button-1>",pulsacion2)
 boton_3 = Button(root, text="3", width=9, height=3, bg="white", fg="red", borderwidth=0, cursor="hand2").grid(row=1, column=2, columnspan=1,padx=1, pady=1)
 boton_4 = Button(root, text="4", width=9, height=3, bg="white", fg="red", borderwidth=0, cursor="hand2").grid(row=2, column=0, columnspan=1,padx=1, pady=1)
 boton_5 = Button(root, text="5", width=9, height=3, bg="white", fg="red", borderwidth=0, cursor="hand2").grid(row=2, column=1, columnspan=1,padx=1, pady=1)
